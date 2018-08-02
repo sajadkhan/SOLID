@@ -11,11 +11,14 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        // Do any additional setup after loading the view, typically from a nib.
+        let url = URL(string: "https://saturn.jpl.nasa.gov/system/resources/detail_files/7848_PIA12797-full.jpg")!
+        let imageDisplay = ImageDisplay()
+        imageDisplay.displayImage(from: ImageSource(with: url),
+                                    in: imageView)
+    
     }
 
     override func didReceiveMemoryWarning() {
