@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadImage(url: CassiniURLs.saturn)
-    
+        
     }
     
     // Load image in the image view
@@ -25,6 +25,11 @@ class ViewController: UIViewController {
         ImageDisplay.display(with: creator, in: imageView)
     }
     
+    // Perform some image operations
+    private func peformOperationOnImage() {
+        let scale = Scale(2.0)
+        let alpha = Transparency(0.5)
+    }
 }
 
 struct CassiniURLs {

@@ -71,5 +71,14 @@ extension UIImage {
         return resultImage
         
     }
+    
+    //Change alpha
+    class func alpha(image: UIImage, to value: CGFloat) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(image.size, false, image.scale)
+        image.draw(at: CGPoint.zero, blendMode: .normal, alpha: value)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage!
+    }
 
 }

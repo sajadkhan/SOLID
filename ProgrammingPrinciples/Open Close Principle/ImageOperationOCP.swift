@@ -21,7 +21,7 @@ protocol ImageOperation {
 }
 
 ///Scale Operation
-class ScaleOperation: ImageOperation {
+class Scale: ImageOperation {
     private let scale: CGFloat
     init(_ scale: CGFloat) {
         self.scale = scale
@@ -32,13 +32,24 @@ class ScaleOperation: ImageOperation {
 }
 
 ///Resize Operation
-class ResizeOperation: ImageOperation {
+class Resize: ImageOperation {
     private let size: CGSize
     init(_ size: CGSize) {
         self.size = size
     }
     func process(image: UIImage) -> UIImage {
         return UIImage.resize(image: image, with: size)
+    }
+}
+
+///Alpha Operation
+class Transparency: ImageOperation {
+    private let alpha: CGFloat
+    init(_ alpha: CGFloat) {
+        self.alpha = min(1.0, alpha)
+    }
+    func process(image: UIImage) -> UIImage {
+        return UIImage.alpha(image: image, to: alpha)
     }
 }
 

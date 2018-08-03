@@ -14,6 +14,7 @@
 		06A38B5421130F0F009DC492 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06A38B5321130F0F009DC492 /* Assets.xcassets */; };
 		06A38B5721130F0F009DC492 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06A38B5521130F0F009DC492 /* LaunchScreen.storyboard */; };
 		06A38B61211319A1009DC492 /* ImageControllerSRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A38B60211319A1009DC492 /* ImageControllerSRP.swift */; };
+		06C39247211496150014C394 /* ImageOperationOCP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C3924221148B180014C394 /* ImageOperationOCP.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,22 +63,21 @@
 			isa = PBXGroup;
 			children = (
 				06A38B6321132B24009DC492 /* Supporting Files */,
-				06333F90211478FA00447351 /* ImageOperation.swift */,
-				06C3924221148B180014C394 /* ImageOperationOCP.swift */,
 				06A38B4E21130F0A009DC492 /* ViewController.swift */,
-				06A38B6221132AFA009DC492 /* SingleResponsibilityPrinciple */,
+				06A38B6221132AFA009DC492 /* Single Responsibility Principle */,
+				06C39246211495EB0014C394 /* Open Close Principle */,
 				06A38B5821130F0F009DC492 /* Info.plist */,
 			);
 			path = ProgrammingPrinciples;
 			sourceTree = "<group>";
 		};
-		06A38B6221132AFA009DC492 /* SingleResponsibilityPrinciple */ = {
+		06A38B6221132AFA009DC492 /* Single Responsibility Principle */ = {
 			isa = PBXGroup;
 			children = (
 				06A38B5E21130F9D009DC492 /* ImageControllerOrdinary.swift */,
 				06A38B60211319A1009DC492 /* ImageControllerSRP.swift */,
 			);
-			path = SingleResponsibilityPrinciple;
+			path = "Single Responsibility Principle";
 			sourceTree = "<group>";
 		};
 		06A38B6321132B24009DC492 /* Supporting Files */ = {
@@ -90,6 +90,15 @@
 				06A38B5521130F0F009DC492 /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		06C39246211495EB0014C394 /* Open Close Principle */ = {
+			isa = PBXGroup;
+			children = (
+				06333F90211478FA00447351 /* ImageOperation.swift */,
+				06C3924221148B180014C394 /* ImageOperationOCP.swift */,
+			);
+			path = "Open Close Principle";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +175,7 @@
 				06A38B4F21130F0A009DC492 /* ViewController.swift in Sources */,
 				06A38B61211319A1009DC492 /* ImageControllerSRP.swift in Sources */,
 				06A38B4D21130F0A009DC492 /* AppDelegate.swift in Sources */,
+				06C39247211496150014C394 /* ImageOperationOCP.swift in Sources */,
 				06333F9321147AD100447351 /* UIImage+Operations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
