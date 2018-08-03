@@ -72,13 +72,11 @@ class ImageCreator {
 class ImageDisplay {
     
     //Method for displaying image from a source in imageView
-    func displayImage(from source:ImageSource, in imageView: UIImageView) {
-        
-        let imageCreator = ImageCreator(with: source)
+    class func display(with creator:ImageCreator, in imageView: UIImageView) {
         
         //We dispatch to main queue because completion block will be called on other queue
         //as we are doing UI related task so its neccessary to dispatch to main queue.
-        imageCreator.createImage { image in
+        creator.createImage { image in
             DispatchQueue.main.async {
                 imageView.image = image
             }

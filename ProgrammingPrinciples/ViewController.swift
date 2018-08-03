@@ -14,18 +14,24 @@ class ViewController: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let url = URL(string: "https://saturn.jpl.nasa.gov/system/resources/detail_files/7848_PIA12797-full.jpg")!
-        let imageDisplay = ImageDisplay()
-        imageDisplay.displayImage(from: ImageSource(with: url),
-                                    in: imageView)
+        
+        loadImage(url: url)
     
+    }
+    
+    // Load image in the image view
+    private func loadImage(url: URL) {
+        let source = ImageSource(with: url)
+        let creator = ImageCreator(with: source)
+        ImageDisplay.display(with: creator, in: imageView)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
 }
 
