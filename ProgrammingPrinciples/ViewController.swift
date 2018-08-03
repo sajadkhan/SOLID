@@ -14,10 +14,7 @@ class ViewController: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let url = URL(string: "https://saturn.jpl.nasa.gov/system/resources/detail_files/7848_PIA12797-full.jpg")!
-        
-        loadImage(url: url)
+        loadImage(url: CassiniURLs.saturn)
     
     }
     
@@ -27,11 +24,10 @@ class ViewController: UIViewController {
         let creator = ImageCreator(with: source)
         ImageDisplay.display(with: creator, in: imageView)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
+}
+
+struct CassiniURLs {
+    static let saturn = URL(string: "https://saturn.jpl.nasa.gov/system/resources/detail_files/7848_PIA12797-full.jpg")!
 }
 
