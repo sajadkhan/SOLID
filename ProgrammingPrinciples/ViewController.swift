@@ -25,14 +25,16 @@ class ViewController: UIViewController {
     private func loadImage(url: URL) {
         let source = ImageSource(with: url)
         let creator = ImageCreator(with: source)
-        ImageDisplay.display(with: creator, in: imageView) {
-            self.performOperationOnImage()
-        }
+        ImageDisplay.display(with: creator, in: imageView)
+    }
+    
+    @IBAction func operationsButtonPressed(_ sender: Any) {
+        self.performOperationOnImage()
     }
     
     // Perform some image operations
     private func performOperationOnImage() {
-        let scale = Scale(1.3)
+        let scale = Scale(0.5)
         let alpha = Transparency(0.5)
         
         if let image = imageView.image {

@@ -72,14 +72,16 @@ class ImageCreator {
 class ImageDisplay {
     
     //Method for displaying image from a source in imageView
-    class func display(with creator:ImageCreator, in imageView: UIImageView, completionHandler: @escaping () -> Void) {
+    class func display(with creator:ImageCreator, in imageView: UIImageView, completionHandler: (() -> Void)? = nil)  {
     
         //We dispatch to main queue because completion block will be called on other queue
         //as we are doing UI related task so its neccessary to dispatch to main queue.
         creator.createImage { image in
             DispatchQueue.main.async {
                 imageView.image = image
-                completionHandler()
+                if completionHandler != nil {
+                    completionHandler!()
+                }
             }
         }
     }
