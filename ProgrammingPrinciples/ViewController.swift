@@ -14,21 +14,32 @@ class ViewController: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         loadImage(url: CassiniURLs.saturn)
-        
     }
     
     // Load image in the image view
     private func loadImage(url: URL) {
         let source = ImageSource(with: url)
         let creator = ImageCreator(with: source)
-        ImageDisplay.display(with: creator, in: imageView)
+        ImageDisplay.display(with: creator, in: imageView) {
+            self.performOperationOnImage()
+        }
     }
     
     // Perform some image operations
-    private func peformOperationOnImage() {
-        let scale = Scale(2.0)
+    private func performOperationOnImage() {
+        let scale = Scale(1.3)
         let alpha = Transparency(0.5)
+        
+        if let image = imageView.image {
+            let processor = ImageProcessor(image: image, operations: [scale, alpha])
+            let image = processor.run()
+            imageView.image = image
+        }
     }
 }
 

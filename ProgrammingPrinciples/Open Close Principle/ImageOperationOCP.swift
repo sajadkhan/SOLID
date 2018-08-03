@@ -59,6 +59,7 @@ class ImageProcessor {
     
     //convenience intializer to add operations
     init(image: UIImage, operations: [ImageOperation]) {
+        self.image = image
         self.operations = operations
     }
     
@@ -68,8 +69,12 @@ class ImageProcessor {
     }
     
     //Process all operation
-    func run() {
-        _ = operations.map { $0.process(image: image)}
+    func run() -> UIImage {
+        var imageProcessed: UIImage = image
+        for op in operations {
+            imageProcessed = op.process(image: imageProcessed)
+        }
+        return imageProcessed
     }
     
 }
