@@ -43,6 +43,30 @@ class ViewController: UIViewController {
             imageView.image = image
         }
     }
+    
+    @IBAction func filterTap(_ sender: UIButton) {
+        applyAFilter()
+    }
+    
+    // Apply some filter
+    private func applyAFilter() {
+        if let image = imageView.image {
+            //setup decorator
+            let decorator = ImageDecorator(with: image)
+            
+            //create some filter
+            let boxBlur = BoxBlurFilter()
+            let gaussianBlur = GaussianBlurFilter()
+            
+            //apply them
+            //for showing LSP applying them both. See ImageDecorator.swift
+            var image = decorator.apply(filter: boxBlur)
+            image = decorator.apply(filter: gaussianBlur)
+            
+            imageView.image = image
+        }
+    }
+    
 }
 
 struct CassiniURLs {
