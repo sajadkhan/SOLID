@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		06029E8C2117136000C03291 /* ImageInteractionISP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06029E8B2117136000C03291 /* ImageInteractionISP.swift */; };
+		06029E8E2117537300C03291 /* ImagePersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06029E8D2117537300C03291 /* ImagePersistence.swift */; };
 		06333F9321147AD100447351 /* UIImage+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06333F9221147AD100447351 /* UIImage+Operations.swift */; };
 		068BDA3D2115BB3700A85B78 /* ImageDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068BDA3C2115BB3700A85B78 /* ImageDecorator.swift */; };
 		06A38B4D21130F0A009DC492 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A38B4C21130F0A009DC492 /* AppDelegate.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		06029E882116F3BC00C03291 /* ImageInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInteraction.swift; sourceTree = "<group>"; };
 		06029E8B2117136000C03291 /* ImageInteractionISP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInteractionISP.swift; sourceTree = "<group>"; };
+		06029E8D2117537300C03291 /* ImagePersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePersistence.swift; sourceTree = "<group>"; };
 		06333F90211478FA00447351 /* ImageOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageOperation.swift; sourceTree = "<group>"; };
 		06333F9221147AD100447351 /* UIImage+Operations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Operations.swift"; sourceTree = "<group>"; };
 		068BDA3C2115BB3700A85B78 /* ImageDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDecorator.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 			children = (
 				06A38B6321132B24009DC492 /* Supporting Files */,
 				06A38B4E21130F0A009DC492 /* ViewController.swift */,
+				06029E8D2117537300C03291 /* ImagePersistence.swift */,
 				06029E8A2117132100C03291 /* Interface Segregation Principle */,
 				06A38B6221132AFA009DC492 /* Single Responsibility Principle */,
 				06C39246211495EB0014C394 /* Open Close Principle */,
@@ -197,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06A38B4F21130F0A009DC492 /* ViewController.swift in Sources */,
+				06029E8E2117537300C03291 /* ImagePersistence.swift in Sources */,
 				06A38B61211319A1009DC492 /* ImageControllerSRP.swift in Sources */,
 				06A38B4D21130F0A009DC492 /* AppDelegate.swift in Sources */,
 				06029E8C2117136000C03291 /* ImageInteractionISP.swift in Sources */,
