@@ -35,7 +35,7 @@
 		06A38B5321130F0F009DC492 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06A38B5621130F0F009DC492 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06A38B5821130F0F009DC492 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		06A38B5E21130F9D009DC492 /* ImageControllerOrdinary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageControllerOrdinary.swift; sourceTree = "<group>"; };
+		06A38B5E21130F9D009DC492 /* ImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageController.swift; sourceTree = "<group>"; };
 		06A38B60211319A1009DC492 /* ImageControllerSRP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageControllerSRP.swift; sourceTree = "<group>"; };
 		06C3924221148B180014C394 /* ImageOperationOCP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageOperationOCP.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +58,15 @@
 				06029E8B2117136000C03291 /* ImageInteractionISP.swift */,
 			);
 			path = "Interface Segregation Principle";
+			sourceTree = "<group>";
+		};
+		06029E91211759B600C03291 /* Dependency Inversion Principle */ = {
+			isa = PBXGroup;
+			children = (
+				06029E8D2117537300C03291 /* ImagePersistence.swift */,
+				06029E8F211757B100C03291 /* ImagePersistenceDIP.swift */,
+			);
+			path = "Dependency Inversion Principle";
 			sourceTree = "<group>";
 		};
 		068BDA3E2115E5D800A85B78 /* Liskov Subsitution Principle */ = {
@@ -89,8 +98,7 @@
 			children = (
 				06A38B6321132B24009DC492 /* Supporting Files */,
 				06A38B4E21130F0A009DC492 /* ViewController.swift */,
-				06029E8D2117537300C03291 /* ImagePersistence.swift */,
-				06029E8F211757B100C03291 /* ImagePersistenceDIP.swift */,
+				06029E91211759B600C03291 /* Dependency Inversion Principle */,
 				06029E8A2117132100C03291 /* Interface Segregation Principle */,
 				06A38B6221132AFA009DC492 /* Single Responsibility Principle */,
 				06C39246211495EB0014C394 /* Open Close Principle */,
@@ -103,7 +111,7 @@
 		06A38B6221132AFA009DC492 /* Single Responsibility Principle */ = {
 			isa = PBXGroup;
 			children = (
-				06A38B5E21130F9D009DC492 /* ImageControllerOrdinary.swift */,
+				06A38B5E21130F9D009DC492 /* ImageController.swift */,
 				06A38B60211319A1009DC492 /* ImageControllerSRP.swift */,
 			);
 			path = "Single Responsibility Principle";
