@@ -75,6 +75,30 @@ class ViewController: UIViewController {
         }
     }
     
+    
+    @IBAction func saveTap(_ sender: UIButton) {
+        if let image = imageView.image {
+            //Create handler
+            let handler = GalleryHandler()
+            
+            //Use it to initialize image persistence object
+            let imagePersistence = ImagePersistence(handler: handler)
+            
+            //Save
+            //It won't save because save operation are not implemented yet.
+            showImageSaveOperationFeedback(success: imagePersistence.save(image: image))
+            
+        }
+    }
+    
+    private func showImageSaveOperationFeedback(success: Bool) {
+        let title = success ? "Success" : "Failed"
+        let message = success ? "Image was saved." : "Sorry, failed to save the Image."
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+        self.present(alert, animated: true)
+    }
+    
 }
 
 struct CassiniURLs {

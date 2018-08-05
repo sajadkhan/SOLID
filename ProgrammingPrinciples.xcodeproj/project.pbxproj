@@ -98,11 +98,11 @@
 			children = (
 				06A38B6321132B24009DC492 /* Supporting Files */,
 				06A38B4E21130F0A009DC492 /* ViewController.swift */,
-				06029E91211759B600C03291 /* Dependency Inversion Principle */,
-				06029E8A2117132100C03291 /* Interface Segregation Principle */,
 				06A38B6221132AFA009DC492 /* Single Responsibility Principle */,
 				06C39246211495EB0014C394 /* Open Close Principle */,
 				068BDA3E2115E5D800A85B78 /* Liskov Subsitution Principle */,
+				06029E8A2117132100C03291 /* Interface Segregation Principle */,
+				06029E91211759B600C03291 /* Dependency Inversion Principle */,
 				06A38B5821130F0F009DC492 /* Info.plist */,
 			);
 			path = ProgrammingPrinciples;
