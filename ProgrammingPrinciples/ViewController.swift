@@ -10,7 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var imageView: UIImageView!
+    var imageInteraction: ImageZoomInteration?
+
+    @IBOutlet weak var imageView: UIImageView! {
+        didSet {
+            //Add ImageInteractions
+           imageInteraction = ImageZoomInteration(with: imageView)
+        }
+    }
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +27,7 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
         loadImage(url: CassiniURLs.saturn)
     }
+
     
     // Load image in the image view
     private func loadImage(url: URL) {
